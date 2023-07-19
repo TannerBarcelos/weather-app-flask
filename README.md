@@ -8,7 +8,7 @@ See it [live](https://flask-weather-service.onrender.com)
 
 ### Running the Project Locally
 
-1. Rename `env.example` to `.env` and provide values for each entry in the file.
+1. Rename `env.local` to `.env` and provide values for each entry in the file.
 
    > Head to [OpenWeatherMap](https://openweathermap.org/) to get an API key.
 
@@ -34,10 +34,10 @@ See it [live](https://flask-weather-service.onrender.com)
 
    ```bash
    cd app
-   python server.py
+   FLASK_ENV=development python server.py
    ```
 
-6. Open the app in your browser at `http://localhost:<PORT_FROM_.ENV>`
+6. Open the app in your browser at `http://localhost:<PORT_FROM_CONF>`
 
 7. When you are done, kill the app and deactivate the virtual environment
 
