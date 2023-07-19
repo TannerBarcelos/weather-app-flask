@@ -4,6 +4,8 @@ This is a learning project for me to learn Flask with Python. I use NodeJS / TS 
 
 See it [live](https://flask-weather-service.onrender.com)
 
+> This project uses advanced file structure and is not recommended for beginners. If you are a beginner, I recommend you follow the codebase [here](https://github.com/TannerBarcelos/software-engineering-resources/tree/basic-version/backend/flask/weather-app)
+
 ### Running the Project Locally
 
 1. Rename `env.local` to `.env` and provide values for each entry in the file.
