@@ -8,7 +8,7 @@ See it [live](https://flask-weather-service.onrender.com)
 
 ### Running the Project Locally
 
-1. Rename `env.local` to `.env` and provide values for each entry in the file.
+1. Rename `env.example` to `.env` and provide values for each entry in the file.
 
    > Head to [OpenWeatherMap](https://openweathermap.org/) to get an API key.
 
