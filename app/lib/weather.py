@@ -1,6 +1,7 @@
 """
 Weather Module
 """
+from flask import current_app
 from pprint import pprint
 import requests
 import os
@@ -14,13 +15,23 @@ city: str
     The city to get the weather for
 """
 
-def get_current_weather(city='Honolulu'): 
-    api_key = os.getenv('OPEN_WEATHER_API_KEY')
-    base_url = os.getenv('OPEN_WEATHER_BASE_URL')
-    url = f"{base_url}?q={city}&units=imperial&appid={api_key}"
+def get_current_weather(city='Honolulu'):
+    """
+    This function will get the current weather for a given city
+    """ 
+    url = request_builder(city)
     response = requests.get(url).json()
     pprint(response)
     return response
+
+
+def request_builder(city='Honolulu'):
+    """
+    This function will build the request URL for the Open Weather API
+    """
+    api_key = current_app.config['OPEN_WEATHER_API_KEY']
+    base_url = current_app.config['OPEN_WEATHER_BASE_URL']
+    return f"{base_url}?q={city}&units=imperial&appid={api_key}"
 
 # Using as a script rather than a module / flask app
 if __name__ == "__main__":
