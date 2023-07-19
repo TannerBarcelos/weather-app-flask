@@ -10,7 +10,7 @@ def capitalize_string(string) -> str:
     return string.capitalize()
 
 def format_float(num, precision=1) -> str:
-    """Format a float to one decimal place.
+    """Format a float to 1 or N decimal place.
 
     Args:
         num (float): The float to format.
