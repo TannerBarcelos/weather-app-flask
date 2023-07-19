@@ -1,5 +1,5 @@
 from flask import Flask
-from routes.app_routes import api
+from routes.routes import api as routes
 import conf # conf is a python module and therefore we can load all its contents into the Flask config using from_object() method
 from utils.server_setup import load_conf
 
@@ -10,6 +10,6 @@ def create_app() -> Flask:
     load_conf(app, conf)
 
     # Register root blueprint (wrapper for all routes)
-    app.register_blueprint(api, url_prefix='/api')
+    app.register_blueprint(routes, url_prefix='/api')
 
     return app
